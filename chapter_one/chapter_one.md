@@ -68,6 +68,31 @@ Classes & Design → Programming Stage → Functional Python Program
 - **🌐 Public Interface**: Methods and attributes available for external use.
 - **🔐 Private Data**: Internal implementation details hidden from outside access.
 
+### 🔐 Encapsulation Example
+
+```python
+class Account:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance  # private attribute
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+
+    def get_balance(self):
+        return self.__balance
+
+# Usage
+acc = Account("Alice", 1000)
+acc.deposit(500)
+print(acc.get_balance())  # Output: 1500
+```
+
 ---
 
 ## 🎭 Abstraction
@@ -91,6 +116,26 @@ Classes & Design → Programming Stage → Functional Python Program
 - Encourages code reuse and separation of concerns.
 - Components can often be reused independently.
 
+### 🧱 Composition Example
+
+```python
+class Engine:
+    def start(self):
+        print("Engine started.")
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()  # Composition
+
+    def drive(self):
+        self.engine.start()
+        print("Car is driving.")
+
+# Usage
+my_car = Car()
+my_car.drive()
+```
+
 ---
 
 ## 🧬 Inheritance
@@ -102,6 +147,22 @@ Classes & Design → Programming Stage → Functional Python Program
 - Promotes code reuse.
 - Enables specialization through method overriding.
 
+### 🧬 Inheritance Example
+
+```python
+class Animal:
+    def speak(self):
+        print("Animal speaks.")
+
+class Dog(Animal):  # Inherits from Animal
+    def speak(self):
+        print("Woof!")
+
+# Usage
+dog = Dog()
+dog.speak()  # Output: Woof!
+```
+
 ---
 
 ## 🌀 Polymorphism
@@ -110,6 +171,25 @@ Classes & Design → Programming Stage → Functional Python Program
 - Python supports **dynamic polymorphism** due to its **duck typing** nature:
 
 > “If it walks like a duck and quacks like a duck, it’s a duck.”
+
+### 🌀 Polymorphism Example
+
+```python
+class Bird:
+    def fly(self):
+        print("Bird is flying.")
+
+class Airplane:
+    def fly(self):
+        print("Airplane is flying.")
+
+def make_it_fly(flyer):
+    flyer.fly()
+
+# Usage
+make_it_fly(Bird())      # Output: Bird is flying.
+make_it_fly(Airplane())  # Output: Airplane is flying.
+```
 
 ---
 
@@ -126,3 +206,38 @@ Classes & Design → Programming Stage → Functional Python Program
 ### ✅ Recommendation:
 - Prefer **composition** over inheritance when design becomes tangled.
 - Python's `super()` function and MRO help manage complex inheritance trees safely—but only when used with care.
+
+### 🌀 Composition over Inheritance Example
+
+```python
+class Father:
+    def speak(self):
+        return "Father says: Work hard!"
+
+class Mother:
+    def speak(self):
+        return "Mother says: Be kind!"
+
+class Child:
+    def __init__(self, father, mother):
+        self.father = father
+        self.mother = mother
+
+    def speak(self, parent="father"):  # Explicitly choose which method to call
+        if parent == "father":
+            return self.father.speak()
+        elif parent == "mother":
+            return self.mother.speak()
+        else:
+            return "Child says: I have my own voice!"
+
+# Creating instances
+dad = Father()
+mom = Mother()
+child = Child(dad, mom)
+
+# Explicitly choosing which parent's method to call
+print(child.speak("father"))  # Outputs: "Father says: Work hard!"
+print(child.speak("mother"))  # Outputs: "Mother says: Be kind!"
+print(child.speak("self"))    # Outputs: "Child says: I have my own voice!"
+```
