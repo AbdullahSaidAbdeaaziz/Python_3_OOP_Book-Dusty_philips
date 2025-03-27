@@ -63,6 +63,7 @@ This repo is a learning companion, not a replacement for the book — please con
 
 For questions or collaboration: [Join us on our Discord Server](https://discord.gg/htXUhHk8)  
 Follow me on GitHub: [github.com/MansAlien](https://github.com/MansAlien)
+Follow me on LinkedIn:  [Ahmed Mansour](https://www.linkedin.com/in/ahmed-mansour-763b60287)
 
 ---
 
