@@ -35,8 +35,10 @@ Each chapter has its own folder or Markdown file that includes:
 | Chapter | Title | Status |
 |--------|-------|--------|
 | 1 | Object-Oriented Design | ✅ Done |
-| 2 | Classes and Objects | 🚧 In Progress |
-| 3 | ... | ⏳ Coming Soon |
+| 2 | Classes and Objects | ✅ Done |
+| 3 | When Objects Are Alike | 🚧 In Progress |
+| 4 | ... | ⏳ Coming Soon |
+
 
 ---
 
