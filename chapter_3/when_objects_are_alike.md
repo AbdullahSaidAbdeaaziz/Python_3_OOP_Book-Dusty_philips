@@ -33,3 +33,29 @@ This chapter dives into how inheritance helps you avoid duplicating code by crea
 - **Overriding:** A subclass can redefine a method from its parent to extend or modify bahavior.
 - **Using `super()`:** Instead of calling a parent's method directly (which might lead to duplicated calls), use `super()` to ensure the parent's method is called only once and in the proper order.
 - [04.overriding](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/04.overriding.py)
+- A `super()` call can be made inside any method, not just `__init__`. This means all methods can be modified via overriding and calling `super()`.
+
+---
+
+## 4️⃣ Multiple Inheritance
+- **Concept:** A class can inherit from multiple superclass, combining the functionality.
+- **Explanation:**
+    - THis is useful for mixins (small classes adding specific features) but can complicate method resolution order (MRO), especially in the "diamond problem" where a method might be called multiple times.
+    - [05.multiple_inheritance](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/05.multiple_inheritance.py)
+    - [06.diamond_problem_no_super](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/06.diamond_problem_no_super.py)
+    - [07.diamond_problem_with_super](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/07.diamond_problem_with_super.py)
+- `super()` follows the MRO (determined by C3 linearization, ensuring each method is called once.
+- **Best Practice:** Use multiple inheritance sparingly, prefer composition for unrelated behaviors, and rely on super to manage MRO correctly.
+
+---
+
+## 5️⃣ Polymorphism
+- **Concept:** Different subclasses can implement the same method differently, allowing uniform treatment by a common interface.
+- **Explanation:** Polymorphism lets you call a method on a superclass type without knowing the exact subclass, enhancing flexibility.
+- **Best Practice:** Design interfaces that allow polymorphic behavior to keep code extensible.
+- [08.polymorphism](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/08.polymorphism.py)
+
+---
+
+## 6️⃣ Duck Typing
+
