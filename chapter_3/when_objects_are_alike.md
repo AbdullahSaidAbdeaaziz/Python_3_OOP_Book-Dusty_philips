@@ -58,4 +58,17 @@ This chapter dives into how inheritance helps you avoid duplicating code by crea
 ---
 
 ## 6️⃣ Duck Typing
+- **Concept:** If an object has the required methods, it can be used regardless of its class or inheritance.
+- **Explanation:** Python focuses on behavior ("if it walks like a duck and talks like a duck, it's a duck") rather than strict type hierachies.
+- **Best Practice:** Use duck typing to reduce unnecessary inheritance, focusing on what an object does rather than what it is.
+- [09.duck_typing_1](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/09.duck_typing_1.py)
+- [10.duck_typing_2](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/10.duck_typing_2.py)
 
+---
+
+## 7️⃣ Abstract Base Classes (ABCs)
+- **Concept:** ABCs define a contract that subclasses must follow, ensuring specific methods are implemented.
+- **Explanation:** ABCs enforce structure while allowing duck typing flexibility.
+- **Best Practice:** Use ABCs to document and enforce inheritance, especially in extensible systems.
+- [11.ABCs_1](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/11.ABCs_1.py)
+- [12.ABCs_2](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/12.ABCs_2.py)
