@@ -1,7 +1,7 @@
 # 🚀 Chapter Three: When object-oriented are alike
 
 ## 📖 overview
-This chapter dives into how inheritance helps you avoid duplicating code by creating “is a” relationships between classes. It covers both basic and multiple inheritance, explains how to override methods and use the super() function to call parent methods correctly, and discusses advanced topics like polymorphism, duck typing, and abstract base classes (ABCs).
+This chapter dives into how inheritance helps you avoid duplicating code by creating “is a” relationships between classes. It covers both basic and multiple inheritance, explains how to override methods and use the `super()` function to call parent methods correctly, and discusses advanced topics like polymorphism, duck typing, and abstract base classes (ABCs).
 
 ---
 
@@ -14,7 +14,7 @@ This chapter dives into how inheritance helps you avoid duplicating code by crea
   ```
 - 📓 Even if you don't specify a parent class in python 3, every class automatically inherits from object.
 - **Example - Contact and Supplier:**
-  - The contact class maintains a shared list of contacts using a class variable. The supplier subclass inherits from contact and adds an order method without duplicating the initialization code.
+  - The `Contact` class maintains a shared list of contacts using a class variable. The `Supplier` subclass inherits from `Contact` and adds an `order` method without duplicating the initialization code.
   - [01.base_class](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/01.base_class.py)
   - [02.Contact_supplier.py](https://github.com/MansAlien/Python_3_OOP_Book-Dusty_philips/blob/main/chapter_3/examples/02.contact_and_supplier.py)
 
