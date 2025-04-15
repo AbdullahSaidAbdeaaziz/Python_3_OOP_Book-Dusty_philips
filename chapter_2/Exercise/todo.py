@@ -22,13 +22,13 @@ class Task:
 class Todo:
     def __init__(self):
         self.tasks: list[Task] = []
-        
+
     def _find_task(self, id: int):
         for task in self.tasks:
             if id == task.id:
                 return task
-        return None 
-    
+        return None
+
     def _check_tasks(self):
         return False if not self.tasks else True
 
@@ -44,7 +44,6 @@ class Todo:
             task.name = new_name
             return True
         return False
-            
 
     def delete_task(self, id: int) -> bool:
         if self._check_tasks():
